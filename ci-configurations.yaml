@@ -1,0 +1,8 @@
+version: 1
+notifications:
+  build:
+    - correo1@auna.pe
+    - correo2@auna.pe
+  approve:
+    - correo1@auna.pe
+    - correo2@auna.pe

@@ -1,0 +1,6 @@
+/infra/**
+/scripts/**
+/test/**
+/ci/**
+Jenkinsfile
+sonar-project.properties

@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+no_color='\033[0m'
+
+echo "-----------------------------"
+echo "Consideraciones de commit:"
+echo ""
+echo -e "${green}<tipo>[ambito]: <descripción>${no_color}"
+echo ""
+echo "Donde:"
+echo ""
+echo "<tipo>: obligatorio. feat, fix, doc, build"
+echo "[ambito]: opcional. En mono repos indicar nombre del paquete afectado. Ejm: @auna\vds-core, @auna\vds-angular."
+echo "<descripción>: obligatorio. texto imperativo que explica brevemente el cambio. Ejm: agrega unit tests. elimina archivos innecesarios."
+echo ""
+echo -e "${green}Ejemplo: feat(index.js): se agregó un mensaje de confirmación${no_color}"
+echo ""
+echo "Para más informacion leer el contenido del siguiente enlace: https://github.com/conventional-changelog/commitlint/#what-is-commitlint"
+echo "-----------------------------"
+npx --no -- commitlint --edit $1
